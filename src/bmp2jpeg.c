@@ -45,7 +45,7 @@ int Bmp2Jpg(const char *bmp_file, const char *jeg_file, const int width, const i
 	    fd = fopen(bmp_file, "rb");
 	    if(!fd)
 	    {
-	        printf("ERROR: Cannot open the image!\n");
+	        printf("ERROR: Cannot open the bmp image file!\n");
 	        free(data);
 	        return -1;
 	    }
