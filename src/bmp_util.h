@@ -11,6 +11,13 @@ typedef struct jpeg_pixel_t
         unsigned char a;  
 }PIXEL_T;  
 
+typedef struct jpeg_color  
+{  
+        unsigned char r;  
+        unsigned char g;  
+        unsigned char b;  
+}COLOR;
+
 typedef struct bmp_file_header  
 {  
         char cfType[2];             //must be “BM”（0x4D42）  
