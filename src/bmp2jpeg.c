@@ -20,9 +20,10 @@
 #include <stdlib.h>
 #include <signal.h>
 #include <sys/timeb.h>
-#include <jpeglib.h>
 
-#define JPEG_QUALITY 95 // Qulaity
+#include <jpeglib.h> // jpeg library header file
+
+#define JPEG_QUALITY 95 // Quality
 	 
 int Bmp2Jpg(const char *bmp_file, const char *jeg_file, const int width, const int height)
 {
@@ -44,7 +45,7 @@ int Bmp2Jpg(const char *bmp_file, const char *jeg_file, const int width, const i
 	    fd = fopen(bmp_file, "rb");
 	    if(!fd)
 	    {
-	        printf("ERROR1: Can not open the image.\n");
+	        printf("ERROR: Cannot open the image!\n");
 	        free(data);
 	        return -1;
 	    }
@@ -55,7 +56,7 @@ int Bmp2Jpg(const char *bmp_file, const char *jeg_file, const int width, const i
 	    {
 	        if(ferror(fd))
 	        {
-	            printf("\nERROR2: Can not read the pixel data.\n");
+	            printf("\nERROR: Cannot read the pixel data!\n");
 	            free(data);
 	            fclose(fd);
 	            return -1;
